@@ -1,1 +1,5 @@
-fastapi[all]
+fastapi
+pydantic
+uvicorn[standard]
+python-dotenv
+google-generativeai
