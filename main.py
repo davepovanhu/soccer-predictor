@@ -54,7 +54,7 @@ async def predict_matches(request: MatchRequest):
                 f"Predict the outcome of the soccer match between {match.team1} and {match.team2}. "
                 f"Provide detailed stats including odds, last 5 games, and league position, and predict the winner."
             )
-            model = genai.GenerativeModel("gemini-1.5-advanced")
+            model = genai.GenerativeModel("gemini-pro")  # Use a supported model
             prediction_result = model.generate_content(input_prompt)
 
             # Extract the prediction text
