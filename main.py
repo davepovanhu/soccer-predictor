@@ -39,7 +39,7 @@ class MatchRequest(BaseModel):
 @app.post("/predict")
 async def predict_matches(request: MatchRequest):
     """
-    Predict the upcoming outcome of soccer matches using Google Generative AI.
+    Predict the upcoming 2025 outcome of soccer matches using Google Generative AI.
     """
     matches = request.matches
 
@@ -51,8 +51,8 @@ async def predict_matches(request: MatchRequest):
         try:
             # Use Generative AI to predict the match outcome
             input_prompt = (
-                f"Predict the upcoming outcome of the soccer match between {match.team1} and {match.team2}. "
-                f"Provide latest detailed stats including odds, last 5 games, and league position, and predict the winner."
+                f"Predict the  upcoming 2025  outcome of the soccer match between {match.team1} and {match.team2}. "
+                f"Provide latest 2025 detailed stats including odds, last 5 games, and league position, and predict the winner."
             )
             model = genai.GenerativeModel("gemini-pro")  # Use a supported model
             prediction_result = model.generate_content(input_prompt)
